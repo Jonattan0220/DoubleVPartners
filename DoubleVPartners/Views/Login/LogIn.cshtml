@@ -1,0 +1,31 @@
+﻿@model DoubleVPartners.Models.LoginRequest
+
+<h2>Validar LogIn</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="LogIn">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Usuario1" class="control-label"></label>
+                <input asp-for="Usuario1" class="form-control" />
+                <span asp-validation-for="Usuario1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pass" class="control-label"></label>
+                <input asp-for="Pass" class="form-control" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Validar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</br>
+<h5>@ViewData["Message"]</h5>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
