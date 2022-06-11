@@ -17,6 +17,7 @@ namespace DoubleVPartners.Models
         [Required(ErrorMessage = "Debe ingresar tipo de Identificacion")]
         [Display(Name = "Tipo de Identificacion")]
         public string TipoIdentificacion { get; set; } = null!;
+        [Display(Name = "Fecha de registro")]
         [DataType(DataType.Date)]
         public DateTime FechaCreacion { get; set; }
         [Required(ErrorMessage = "Debe ingresar un usuario")]
